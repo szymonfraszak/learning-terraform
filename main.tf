@@ -14,6 +14,9 @@ data "aws_ami" "app_ami" {
   owners = ["979382823631"] # Bitnami
 }
 
+# resource - keyword to tell terraform that we're defining a resource
+# aws_instance - resource type (types are defined by specific provider and correlate to infrastructure elements)
+# blog - resource name
 resource "aws_instance" "blog" {
   ami           = data.aws_ami.app_ami.id
   instance_type = var.instance_type
