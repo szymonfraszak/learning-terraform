@@ -18,7 +18,7 @@ data "aws_ami" "app_ami" {
 # aws_instance - resource type (types are defined by specific provider and correlate to infrastructure elements)
 # blog - resource name
 resource "aws_instance" "blog" {
-  ami           = data.aws_ami.app_ami.id
+  ami           = data.aws_ami.app_ami.id # defines the base image to use to create server
   instance_type = var.instance_type
 
   tags = {
