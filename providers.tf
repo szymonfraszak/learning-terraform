@@ -6,6 +6,7 @@ terraform {
   }
 }
 
+# provider definition
 provider "aws" {
   region  = "us-west-2"
 }
